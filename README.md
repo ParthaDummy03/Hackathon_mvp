@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-#This is the first prototype of AI Hackathon by Partho, Irfan and Arif.
+#This is the first prototype of AI Hackathon by Partha, Irfan and Arif.
 
 =======
 
