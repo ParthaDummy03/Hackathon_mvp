@@ -5,6 +5,6 @@
 
 # Hackathon_mvp
 
-ki koro sbai
+viewfile . code error
 
 > > > > > > > origin/main
