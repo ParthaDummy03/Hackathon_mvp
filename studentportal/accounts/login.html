@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <!-- Animated background shapes -->
+    <div class="bg-shapes">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+        <span class="shape shape-4"></span>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="logo-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <h1>Student Portal</h1>
+            <p class="subtitle">Welcome back! Please sign in.</p>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="post" class="login-form">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="id_username">{{ form.username.label }}</label>
+                    {{ form.username }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_password">{{ form.password.label }}</label>
+                    <div class="password-wrap">
+                        {{ form.password }}
+                        <button type="button" class="toggle-password" onclick="togglePwd()">👁</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    <span>Login</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePwd() {
+            const pwd = document.getElementById('id_password');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>

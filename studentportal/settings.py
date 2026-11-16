@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 """Django settings for the studentportal project."""
 
+=======
+>>>>>>> 12435b61cafa5ac2704dc7dd27729591974b3031
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
 # SECURITY: set DJANGO_SECRET_KEY in production.
 SECRET_KEY = os.environ.get(
     'DJANGO_SECRET_KEY',
@@ -18,6 +22,8 @@ ALLOWED_HOSTS = [
     h.strip() for h in os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',') if h.strip()
 ]
 
+=======
+>>>>>>> 12435b61cafa5ac2704dc7dd27729591974b3031
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -25,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 
     'accounts',
 ]
@@ -45,6 +52,15 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+=======
+    'accounts',   # ← add this
+]
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],   # ← add this
+>>>>>>> 12435b61cafa5ac2704dc7dd27729591974b3031
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -57,6 +73,7 @@ TEMPLATES = [
     },
 ]
 
+<<<<<<< HEAD
 WSGI_APPLICATION = 'studentportal.wsgi.application'
 ASGI_APPLICATION = 'studentportal.asgi.application'
 
@@ -89,3 +106,11 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+=======
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']   # ← add this
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
+>>>>>>> 12435b61cafa5ac2704dc7dd27729591974b3031

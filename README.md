@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Portal (Django)
 
 A simple student login + dashboard.
@@ -36,3 +37,15 @@ python manage.py test
 
 Set `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=0` and `DJANGO_ALLOWED_HOSTS=example.com`
 as environment variables before deploying.
+=======
+<<<<<<< HEAD
+#This is the first prototype of AI Hackathon by Partha, Irfan and Arif.
+
+=======
+
+# Hackathon_mvp
+
+viewfile . code error
+
+> > > > > > > origin/main
+>>>>>>> 12435b61cafa5ac2704dc7dd27729591974b3031
